@@ -1,9 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Navbar from '../components/layouts/navbar';
 
 const Router = () => {
-  return (
-    <div>index</div>
-  )
+    return (
+        <BrowserRouter>
+        <Navbar/>
+            <Routes>
+                
+                <Route path='/' exact element={<Home/>}/>
+
+                </Routes >
+        </BrowserRouter>
+    )
 }
 
 export default Router;
