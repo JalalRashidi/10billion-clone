@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 const Navbar = () => {
     const [sideBar, setSideBar] = useState(false)
     return (
-        <nav className='flex justify-between border items-center px-20 sticky top-0 bg-white'>
+        <nav className='flex justify-between border items-center px-20 sticky top-0 bg-white z-50'>
             <div className='flex items-center'>
                 <div className='w-[150px] h-[70px] overflow-hidden'>
                     <img src="/logo.png" alt="" className='relative w-[100px] scale-150 -top-5' />
