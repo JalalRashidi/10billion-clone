@@ -12,14 +12,14 @@ const Navbar = () => {
                     <img src="/logo.png" alt="" className='relative w-[100px] scale-150 -top-5' />
                 </div>
                 <div className='md:flex gap-4 font-semibold hidden'>
-                    <Link className='hover:text-green-700'>Home</Link>
-                    <Link className='hover:text-green-700'>Courses</Link>
-                    <Link className='hover:text-green-700'>About Us</Link>
-                    <Link className='hover:text-green-700'>Contact</Link>
+                    <Link to={'/'} className='hover:text-green-700'>Home</Link>
+                    <Link to={'/course'} className='hover:text-green-700'>Courses</Link>
+                    <Link to={'about'} className='hover:text-green-700'>About Us</Link>
+                    <Link to={'contact'} className='hover:text-green-700'>Contact</Link>
                 </div>
             </div>
             <div>
-                <Link className='hover:text-green-700 hidden md:block'>login</Link>
+                <Link to={'login'} className='hover:text-green-700 hidden md:block'>login</Link>
                 <FiMenu className='md:hidden w-5 hover:text-green-700' onClick={() => setSideBar(true)} />
             </div>
             <SideBar sideBar={sideBar} setSideBar={setSideBar} />
@@ -37,11 +37,11 @@ function SideBar({ sideBar, setSideBar }) {
 
             </div>
             <div className='flex flex-col gap-4 mt-8'>
-                <Link className='hover:bg-green-100 p-2'>Login</Link>
-                <Link className='hover:bg-green-100 p-2'>Home</Link>
-                <Link className='hover:bg-green-100 p-2'>Courses</Link>
-                <Link className='hover:bg-green-100 p-2'>About Us</Link>
-                <Link className='hover:bg-green-100 p-2'>Contact</Link>
+                <Link to={'/login'} className='hover:bg-green-100 p-2'>Login</Link>
+                <Link to={'/'} className='hover:bg-green-100 p-2'>Home</Link>
+                <Link to={'/course'} className='hover:bg-green-100 p-2'>Courses</Link>
+                <Link to={'/about'} className='hover:bg-green-100 p-2'>About Us</Link>
+                <Link to={'/contact'} className='hover:bg-green-100 p-2'>Contact</Link>
             </div>
         </div>
     )
